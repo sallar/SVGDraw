@@ -1,0 +1,29 @@
+{
+  "name": "SVGDraw",
+  "version": "0.1.0",
+  "authors": [
+    "Sallar Kaboli <sallar.kaboli@gmail.com>"
+  ],
+  "description": "Draw Simple Shapes",
+  "license": "MIT",
+  "homepage": "http://localhost",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "backbone": "latest",
+    "backbone.localstorage" : "latest",
+    "underscore": "latest",
+    "requirejs": "latest",
+    "text": "latest",
+    "Snap.svg": "latest",
+    "normalize-scss": "latest"
+  },
+  "devDependencies": {}
+}

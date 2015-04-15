@@ -1,0 +1,157 @@
+// Main Layout
+// --------------------------------------------------------
+.app{
+    display: flex;
+    height: 100vh;
+}
+
+    // Sidebar
+    // --------------------------------------------------------
+    .app__sidebar{
+        display: flex;
+        flex: 0 0 14em;
+        border-right: 1px solid $lighter-gray;
+        background-color: $cream;
+        padding: $spacing-unit;
+        overflow: auto;
+
+        > div{
+            width: 100%;
+        }
+
+        section{
+            margin-bottom: $spacing-unit;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            > li{
+                display: block;
+                margin: 0 1px 1px 0;
+
+                input{
+                    float: right;
+                    opacity: 0;
+
+                    &:checked + label{
+                        color: $black;
+                    }
+                }
+
+                label{
+                    color: $gray;
+                    display: block;
+                    cursor: pointer;
+                    // text-transform: uppercase;
+                    font-size: .95rem;
+                    position: relative;
+
+                    span{
+                        vertical-align: -2px;
+                        font-size: 1rem;
+                        margin-right: 5px;
+
+                        &.icon-arrow{
+                            position: absolute;
+                            left: 1em;
+                            bottom: 2px;
+                            font-size: .5em;
+                            background-color: $cream;
+                        }
+                    }
+                }
+            }
+        }
+
+        input[type=color],
+        input[type=number] {
+            height: $spacing-unit;
+            vertical-align: middle;
+            display: inline-block;
+            border: 1px solid $light-gray;
+            background-color: #fff;
+            font-size: .8em;
+            text-align: center;
+            outline: none;
+        }
+
+        .colors{
+            @extend %clearfix;
+
+            > li{
+                width: $spacing-unit;
+                height: $spacing-unit;
+                display: block;
+                float: left;
+                position: relative;
+
+                > label {
+                    z-index: 1;
+                    position: absolute;
+                    display: block;
+                    top: 0; right: 0; bottom: 0; left: 0;
+                    border: 2px solid $cream;
+                }
+
+                > input{
+                    &:checked + label{
+                        border-color: $dark-gray;
+                    }
+                }
+            }
+        }
+    }
+
+    // Canvas
+    // --------------------------------------------------------=
+    .app__canvas{
+        display: flex;
+        flex: 1;
+        position: relative;
+    }
+
+        .app__canvas__screen{
+            width: 100%;
+            height: 100vh;
+            cursor: crosshair;
+
+            &.textEdit{
+                cursor: text;
+            }
+        }
+
+        .app__canvas__guide{
+            position: absolute;
+            right: 2vw;
+            bottom: 1vh;
+            z-index: 10000;
+            font-size: .8em;
+            pointer-events: none;
+            color: $gray;
+            text-align: right;
+        }
+
+        .app__canvas__text{
+            background-color: rgba(255,255,255,.9);
+            color: $black;
+            position: absolute;
+            top: 0; bottom: 0; right: 0; left: 0;
+            z-index: 10001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > input{
+                border: 0;
+                background-color: transparent;
+                font-size: 5em;
+                width: 90%;
+                height: 90%;
+                text-align: center;
+                font-weight: bold;
+                outline: none;
+            }
+        }

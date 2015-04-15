@@ -1,0 +1,58 @@
+<!-- Shape -->
+<section>
+<h5>Shape:</h5>
+<nav>
+    <ul>
+        <% _.each([
+            {name: 'rectangle', icon: 'square', arrow: true},
+            {name: 'square', icon: 'square'},
+            {name: 'ellipse', icon: 'circle', arrow: true},
+            {name: 'circle', icon: 'circle'},
+            {name: 'text', icon: 'text'}
+        ], function(shapeObj, i){ %>
+        <li>
+            <input class="shape" type="radio" name="shape" value="<%= shapeObj.name %>" id="shape-<%= shapeObj.name %>"<%= (shapeObj.name == shape) ? ' checked' : '' %>>
+            <label for="shape-<%= shapeObj.name %>">
+                <span class="icon-<%= shapeObj.icon %>"></span><% if( shapeObj.arrow ){ %><span class="icon-arrow"></span><% } %><%= shapeObj.name.capitalize() %>
+            </label>
+        </li>
+        <% }); %>
+    </ul>
+</nav>
+</section>
+
+<!-- Shape Color -->
+<section>
+    <h5>Fill Color:</h5>
+    <ul class="colors">
+        <% _.each([
+            '#000000', '#C6CBCC', '#9DC6D8', '#7DA1BF', '#00B2CA',
+            '#1D4E89', '#7DCFB6', '#D2B29A', '#F79256', '#EAD98B',
+            '#E3868F', '#955251', '#4E6E38', '#7F8040', '#C78D6B',
+            '#888688', '#B38FB1'
+        ], function(color, index) { %>
+        <li>
+            <input type="radio" name="fill" value="<%= color %>" id="color-<%= index %>" <%= (color == fill) ? 'checked' : '' %>>
+            <label for="color-<%= index %>" style="background-color: <%= color %>"></label>
+        </li>
+        <% }); %>
+    </ul>
+    <small>Colors from PANTONE&reg;</small>
+</section>
+
+<!-- Stroke Color -->
+<section>
+    <h5>Stroke:</h5>
+    <input type="number" min="0" max="10" value="<%= strokeWidth %>" name="strokeWidth">
+    <input type="color" value="<%= strokeColor %>" name="strokeColor" id="strokeColor">
+</section>
+
+<!-- Font Family -->
+<section>
+    <h5>Font Family:</h5>
+    <select name="fontFamily">
+        <% _.each(['Helvetica Neue', 'Arial', 'Georgia', 'Times New Roman', 'Avenir'], function(font, i) { %>
+        <option value="<%= font %>" <%= (font == fontFamily) ? 'selected' : '' %>><%= font %></option>
+        <% }); %>
+    </select>
+</section>

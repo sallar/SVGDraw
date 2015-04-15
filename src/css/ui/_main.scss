@@ -1,0 +1,68 @@
+// Fonts
+// --------------------------------------------------------
+@font-face {
+    font-family: 'AvenirLT';
+    font-weight: 400;
+    src: url('../fonts/avenir-light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'AvenirLT';
+    font-weight: 700;
+    src: url('../fonts/avenir-medium.woff') format('woff');
+}
+
+// Main Settings
+// --------------------------------------------------------
+html, button, input, textarea, select{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+}
+
+html{
+    font: 1em/1.65 "AvenirLT", serif;
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+h5{
+    font-weight: bold;
+    margin: 0 0 $half-spacing-unit;
+    border-bottom: 1px solid $light-gray;
+}
+
+small{
+    font-size: .5em;
+    color: $gray;
+}
+
+// Helpers
+// --------------------------------------------------------
+.moving{
+    cursor: grabbing;
+}
+
+.rotating{
+    cursor: move;
+}
+
+rect, ellipse, circle{
+    cursor: grab;
+}
+
+// Clearfix
+// --------------------------------------------------------
+%clearfix{
+    &:before,
+    &:after{
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after{
+        clear: both;
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name"     : "SWGDraw",
+  "version"  : "0.1.2",
+  "homepage" : "https://github.com/sallar/SVGDraw",
+  "author"   : {
+    "name"  : "Sallar Kaboli",
+    "email" : "sallar.kaboli@gmail.com",
+    "url"   : "http://sallar.me"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-sass": "latest",
+    "grunt-contrib-watch": "latest",
+    "connect-livereload": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest"
+  }
+}
