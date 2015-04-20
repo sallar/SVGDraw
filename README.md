@@ -1,5 +1,8 @@
 ## Simple SVG Drawing App
+This is an experimental SVG drawing web app. Strictly for educational purposes.
 Best performance in Chrome (for now)
+
+![Preview](https://dl.dropboxusercontent.com/u/16657557/Works/SVGDraw/out.gif)
 
 ### Todo:
  - Edit In Place
@@ -8,15 +11,22 @@ Best performance in Chrome (for now)
 ### Instructions
 Watch for changes and compile during development:  
 ```bash
-$ npm install
+$ npm install # Install Dependencies
+$ npm install -g grunt-cli # Install Grunt Cli 
 $ grunt watch
 ```
 Compile all js files using RequireJS for production:  
 ```bash
 $ grunt requirejs
 ```
+Test
+```bash
+$ grunt jsjint
+```
 
 ### License
+Released under the [MIT License](http://sallar.mit-license.org/). © 2015 Sallar Kaboli.
+
     The MIT License (MIT)
     
     Copyright (C) 2003-2015 Sallar Kaboli <sallar.kaboli@gmail.com>
