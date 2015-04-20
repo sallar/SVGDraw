@@ -11,8 +11,10 @@ Best performance in Chrome (for now)
 ### Instructions
 Watch for changes and compile during development:  
 ```bash
-$ npm install # Install Dependencies
 $ npm install -g grunt-cli # Install Grunt Cli 
+$ npm install -g bower # Install Bower
+$ npm install # Install Node Dependencies
+$ bower install # Install Bower Dependencies
 $ grunt watch
 ```
 Compile all js files using RequireJS for production:  
