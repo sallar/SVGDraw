@@ -23,7 +23,7 @@ $ grunt requirejs
 ```
 Test
 ```bash
-$ grunt jsjint
+$ grunt jshint
 ```
 
 ### License
